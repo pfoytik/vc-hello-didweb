@@ -1,4 +1,6 @@
 # Hello DID:WEB and Verifiable Credentials
+First Install with npm install
+
 This repository provides a comprehensive example of DID:WEB and Verifiable Credentials using the [Decentralized Identity](https://github.com/decentralized-identity) Javascript libraries.
 
 It also makes available code snippets and fully working examples on how to:
@@ -38,7 +40,7 @@ const prv = ec.keyFromPrivate(key,'hex').getPublic();
 To get all the values we need for our `DID:WEB` we run:
 
 ```bash
-npm run key
+npm run keys
 ```
 
 Output:
