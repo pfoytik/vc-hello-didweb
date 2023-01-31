@@ -3,13 +3,13 @@ import { Resolver } from 'did-resolver'
 import { getResolver } from 'web-did-resolver'
 
 // Create a singer by using a private key (hex).
-const key = '8eb63d435de4d634bc5f3df79c361e9233f55c9c2fca097758eefb018c4c61df';
+const key = '79fe6ebcdc25e141b17078454f5dedaee1859d3d8b6d0530067d697b5819c810';
 const signer = ES256KSigner(hexToBytes(key))
 
 // Create a signed JWT
 const jwt = await createJWT(
-  { aud: 'did:web:skounis.github.io', name: 'Bob Smith' },
-  { issuer: 'did:web:skounis.github.io', signer },
+  { aud: 'did:web:pfoytik.github.io', name: 'Peter Foytik' },
+  { issuer: 'did:web:pfoytik.github.io', signer },
   { alg: 'ES256K' }
 )
 
@@ -21,13 +21,16 @@ console.log('\n//// JWT Decoded:\n',decoded)
 
 // Verify the JWT by resolving its DID:WEB
 const webResolver = getResolver()
+//console.log(webResolver)
 const resolver = new Resolver({
   ...webResolver
 })
 
+//resolver.resolve("did:web:pfoytik.github.io").then(doc =>console.log(doc))
+
 verifyJWT(jwt, {
   resolver,
-  audience: 'did:web:skounis.github.io'
+  audience: "did:web:pfoytik.github.io"
 }).then(({ payload, doc, did, signer, jwt }) => {
   console.log('\n//// Verified:\n', payload)
 })
