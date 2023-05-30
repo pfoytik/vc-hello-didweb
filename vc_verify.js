@@ -13,10 +13,10 @@ const resolver = new Resolver(getResolver())
 
 // Verify the Credentantial and the Presentation
 const decodedCred = decodeJWT(vcJwt)
-console.log('///// Degree Type:\n', decodedCred['payload']['vc']['credentialSubject']['degree'])
+console.log('Degree Type: ', decodedCred['payload']['vc']['credentialSubject']['degree'])
 const verifiedVC = await verifyCredential(vcJwt, resolver)
-console.log('//// Verified Credentials:\n', verifiedVC['verified'])
+console.log('VerifiedCredentials: ', verifiedVC['verified'])
 
 const verifiedVP = await verifyPresentation(vpJwt, resolver)
-console.log('\n//// Verified Presentation:\n', verifiedVP['verified'])
+console.log('VerifiedPresentation: ', verifiedVP['verified'])
 
