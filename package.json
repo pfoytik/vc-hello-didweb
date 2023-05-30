@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "keys": "node keys.js",
     "jwt": "node did-jwt.js",
-    "vc": "node did-jwt-vc.js"
+    "vc": "node did-jwt-vc.js",
+    "justc": "node vc_verify.js"
   },
   "type": "module",
   "author": "Stavros Kounis",

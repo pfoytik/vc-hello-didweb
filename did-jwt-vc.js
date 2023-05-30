@@ -41,8 +41,11 @@ const vpPayload = {
     '@context': ['https://www.w3.org/2018/credentials/v1'],
     type: ['VerifiablePresentation'],
     verifiableCredential: [vcJwt],
-    foo: "bar"
-  }
+    degree: {
+	    type: 'MastersDegree',
+	    name: 'Masters in Modeling and Simulation'
+    }
+}
 }
 
 // Create the Verifiable Presentation (JWT)
