@@ -1,5 +1,6 @@
 import crypto from 'crypto';
 import elliptic from 'elliptic';
+import {binary_to_base58 as base58} from 'base58-js';
 
 // Request a 32 byte key
 const size = parseInt(process.argv.slice(2)[0]) || 32;
@@ -17,4 +18,6 @@ console.log(`x (hex): ${pub.x.toBuffer().toString('hex')}`)
 console.log(`y (hex): ${pub.y.toBuffer().toString('hex')}`)
 console.log(`x (base64): ${pub.x.toBuffer().toString('base64')}`)
 console.log(`y (base64): ${pub.y.toBuffer().toString('base64')}`)
+console.log(`x (base58): ${base58(pub.x.toBuffer())}`)
+console.log(`y (base58): ${base58(pub.y.toBuffer())}`)
 console.log(`-- kty: EC, crv: secp256k1`)
