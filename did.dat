@@ -1,0 +1,11 @@
+{
+  header: { alg: 'ES256K', typ: 'JWT' },
+  payload: {
+    iat: 1685730843,
+    aud: 'did:web:pfoytik.github.io',
+    name: 'Peter Foytik',
+    iss: 'did:web:pfoytik.github.io'
+  },
+  signature: 'az8epsf28flNOccU3z8LMltnwulZCLaKaYSrzrZ-oftU4FqHfj5KrNx46rAFaqIb0ZJV0m_eQmMg1OxI9GTt0A',
+  data: 'eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ.eyJpYXQiOjE2ODU3MzA4NDMsImF1ZCI6ImRpZDp3ZWI6cGZveXRpay5naXRodWIuaW8iLCJuYW1lIjoiUGV0ZXIgRm95dGlrIiwiaXNzIjoiZGlkOndlYjpwZm95dGlrLmdpdGh1Yi5pbyJ9'
+}
